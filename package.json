@@ -1,0 +1,24 @@
+{
+  "name": "imagegram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type" : "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opeshant/ImageGram.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/opeshant/ImageGram/issues"
+  },
+  "homepage": "https://github.com/opeshant/ImageGram#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
