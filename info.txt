@@ -1,0 +1,75 @@
+
+js code -> raw queries -> db server
+// raw queries is not admirabel cuzz we need to change everything 
+// tidieous process
+
+
+// orm and odm ->object relational/document mapper
+// obected oriented function-> raw queries
+
+
+// write js code -> orm/odm libarary -> communicating to DB 
+// call js functions -> convert js to raw queries -> orm / odm calls raw queires -> DB only understand raw queries
+
+// if we want to change the DB dont need to change the js code we need just need to chnage the configration of orm
+
+
+************************************
+
+// MVC Architecture -> helps u to struture the mvc Architecture
+// model , views and controller
+// view -> user interact (frontend part)
+// model -> business logic 
+// controller -> recives the req from the  view then passes it to mdoel which  process the request then gives the response to controller then sends it back to the view
+
+**************************************
+
+// microservice -> seprate service for making one complete project 
+
+// view is separte layer -> can be made by react 
+
+// backend -> (business logic) + (request recives and process )
+
+***************************************
+
+// client side (view) -> service side 
+
+service side
+//->routing->(validation layers)middlewares->controller->service->repositary
+
+// routing layer -> right req to desired controller
+// middlewares -> its validates 
+// controller -> it accept the req give to busicness logic and gets the res back 
+// service -> actual business logic (function and classes all the logic required to comeplete a req)
+// repositary layer -> which has classes and function responsible for interating with the database 
+
+******************************************
+->>>
+// introduction of repositary layer if we change the odm or db we do not need to re write the service layer again that is an adavantage
+// repositary or DAO (data access object)
+// inside repositary layer u can orm based queries or in raw queries
+
+->>>
+// these orm to work we need to implement a schema layer 
+// stores the schema of the db which stores the orms might depens on 
+// schema can be called as models or db
+
+->>> api layer 
+service can interact with api layer can call external api calls
+
+->>> config layer
+any kind of configration to setup
+
+
+->>> utils/helper
+any kind of helps required
+
+->>> sometimes one more layer called DTO 
+// view -> DTO(data trasnfer object)(mostly contain class defination) -> controller
+
+
+****************************************
+
+
+
+
