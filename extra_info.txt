@@ -13,3 +13,12 @@
 
 // cloudanary is also free service or alternative we can use it 
 
+// aws is not connecting ->>> leave this shit 
+
+
+// warp newtork call in simple function 
+// absracting the network call 
+// npm aws sdk do the same
+
+
+//multer is used manage file uplaod 
