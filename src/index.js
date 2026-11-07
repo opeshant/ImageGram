@@ -1,4 +1,5 @@
 import express from 'express';
+import connectDB from './config/dbConfig.js';
 
 // express module returns a function
 // express is a function 
@@ -27,6 +28,18 @@ app.get('/hello' , (req , res) =>{
 
 // in express u can define in the sepicifc url how will be ur req and the res will be done 
 
+
+// typing something in url is only get request
+
+
 app.listen(PORT , ()=>{
 
+    console.log('connected successfully');
+    connectDB();
 })
+
+
+// odm or orm -> object document / relational mapper
+// these libaraies provide us function which are object oriented function 
+// predefined function provided 
+// automatically converts the fucntion call to queries
