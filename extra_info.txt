@@ -22,3 +22,7 @@
 
 
 //multer is used manage file uplaod 
+
+
+// middlewares has req , res and next middlewares access
+// m1 -->> m2 -->> m3 -->> ... controller -->> ...
