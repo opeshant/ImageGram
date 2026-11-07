@@ -11,4 +11,5 @@
 // upload to aws s3 -> returns a object url
 // object url can be stored -> generally very short
 
+// cloudanary is also free service or alternative we can use it 
 
