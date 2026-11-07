@@ -26,3 +26,38 @@
 
 // middlewares has req , res and next middlewares access
 // m1 -->> m2 -->> m3 -->> ... controller -->> ...
+
+
+// three primary way to send data from client to server
+// 1->url params
+// 2->query params
+// 3->req body
+
+
+1->>>
+/movies/5/tickets
+/movies/7/tickets
+/movies/:id/tickets.   id->is a url params. acess ->> req.params.id.  (req.params -> is a object and it has the property of object req.params)
+
+2->>>>
+/souce?k1=v1&k2=v2&k3=v3... 
+// this kind of format if you have then called query params
+// if we use this synatx then u can acess it easily
+// console.log(req.query). // we can get all the queries we have embedded in the url 
+/ acess from query.params
+// it also returns a object
+
+3 ->>>> 
+// is request body
+// console.log(req.body);
+// express cannot reads the req.body 
+// in postman we can send req.body in different forms
+// in physical layer it some form of binary 
+// this is process is called serialization and deserialization 
+
+
+// binary tree -> understandbel string -> receives the re -> convert back to understanbel form
+
+// but express doesnot know what kind of data req.body is sending 
+// express gives a middlewares -> helps u to convert req.body from json to binary and then to json
+// 

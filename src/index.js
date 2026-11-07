@@ -11,8 +11,17 @@ const app = express(); // sever object
 
 
 app.use(express.json());
+// use function add the middlewares to every single request 
+// express.json() is a middlewares for serilizatoin and deserilization 
+
 app.use(express.text());
+// reads text also not just json
+
 app.use(express.urlencoded());
+// urlencoded data 
+// in postman is x-www-from-urlencoded 
+// urlencoding -> takes a any non understanbel url text and convert it into sepcial encoding 
+
 
 
 app.get('/' , (req , res) =>{
@@ -21,8 +30,8 @@ app.get('/' , (req , res) =>{
 
 app.get('/ping',(req , res)=>{
     return res.json({message : "hey this is the response"});
-    console.log(res.body);
-    console.log(res.query);
+    // console.log(res.body);
+    // console.log(res.query);
     // this fucntion whaterver u pass will be sended as json obejct
 
 });
