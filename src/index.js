@@ -1,6 +1,7 @@
 import express from 'express';
 import connectDB from './config/dbConfig.js';
 import { createPost } from './controller/postController.js';
+import { s3uploader } from './config/multerConfig.js';
 
 
 // express module returns a function
@@ -23,25 +24,26 @@ app.use(express.urlencoded());
 // urlencoding -> takes a any non understanbel url text and convert it into sepcial encoding 
 
 
+//******************************************************** */
+// app.get('/' , (req , res) =>{
+//     return res.send('hello world');
+// });
 
-app.get('/' , (req , res) =>{
-    return res.send('hello world');
-});
+// app.get('/ping',(req , res)=>{
+//     return res.json({message : "hey this is the response"});
+//     // console.log(res.body);
+//     // console.log(res.query);
+//     // this fucntion whaterver u pass will be sended as json obejct
 
-app.get('/ping',(req , res)=>{
-    return res.json({message : "hey this is the response"});
-    // console.log(res.body);
-    // console.log(res.query);
-    // this fucntion whaterver u pass will be sended as json obejct
+// });
 
-});
+// app.get('/hello' , (req , res) =>{
+//     return res.send('fuck u ');
+// });
+//*********************************************************** */
 
-app.get('/hello' , (req , res) =>{
-    return res.send('fuck u ');
-});
+app.post('/posts',s3uploader.single('image'), createPost);
 
-
-app.post('/posts', createPost);
 
 
 // callback is excuted when server is runnig fine
